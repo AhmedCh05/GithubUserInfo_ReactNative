@@ -33,6 +33,7 @@ const LoginScreen = () => {
 					validationSchema={validationSchema}
 					onSubmit={(values) => {
 						console.log("Form submitted:", values);
+						navigation.navigate('Dashboard')
 					}}>
 					{({ handleChange, handleSubmit, values, errors }) => (
 						<>

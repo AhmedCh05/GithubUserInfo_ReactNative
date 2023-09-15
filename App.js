@@ -5,29 +5,41 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import LoginScreen from "./Pages/LoginPage";
 import SignupPage from "./Pages/SignupPage";
 import ForgetPassword from "./Pages/ForgetPassword";
+import Dashboard from "./Pages/Dashboard";
+import UserDetails from './Pages/UserDetailPage';
 
 export default function App() {
-  const Stack = createNativeStackNavigator();
+	const Stack = createNativeStackNavigator();
 
-  return (
-    <NavigationContainer>
-      <Stack.Navigator>
+	return (
+		<NavigationContainer>
+			<Stack.Navigator>
+				{/* <Stack.Screen
+					name="Login"
+					component={LoginScreen}
+					options={{ headerShown: false }}
+				/>
+				<Stack.Screen
+					name="Signup"
+					component={SignupPage}
+					options={{ headerShown: false }}
+				/>
+				<Stack.Screen
+					name="ForgetPassword"
+					component={ForgetPassword}
+					options={{ headerShown: false }}
+				/> */}
+				<Stack.Screen
+					name="Dashboard"
+					component={Dashboard}
+					options={{ headerShown: false }}
+				/>
         <Stack.Screen
-          name="Login"
-          component={LoginScreen}
-          options={{ headerShown: false }} // This line hides the header
-        />
-        <Stack.Screen
-          name="Signup"
-          component={SignupPage}
-          options={{ headerShown: false }} // This line hides the header
-        />
-        <Stack.Screen
-          name="ForgetPassword"
-          component={ForgetPassword}
-          options={{ headerShown: false }} // This line hides the header
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
+					name="UserDetails"
+					component={UserDetails}
+					options={{ headerShown: false }}
+				/>
+			</Stack.Navigator>
+		</NavigationContainer>
+	);
 }
